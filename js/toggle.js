@@ -1,3 +1,9 @@
+// page toggle
+
+document.getElementById("blog-btn").addEventListener("click", () => {
+  window.location.href = "../blog.html";
+});
+
 // button toggle
 
 document.getElementById("donation-btn").addEventListener("click", (event) => {
