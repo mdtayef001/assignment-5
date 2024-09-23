@@ -1,6 +1,9 @@
 function getInputValue(id) {
   const inputValue = document.getElementById(id).value;
   const inputNumber = parseFloat(inputValue);
+  if (isNaN(inputNumber) || inputValue.includes("-")) {
+    return;
+  }
   return inputNumber;
 }
 
