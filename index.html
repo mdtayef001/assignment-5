@@ -90,7 +90,7 @@
 
     <main class="container mx-auto">
       <!-- donatio section -->
-      <section id="donation-section" class="hidden">
+      <section id="donation-section" class="">
         <!--  1 -->
         <div class="mt-8 p-8 border-2 rounded-3xl mb-8">
           <div class="lg:flex gap-8">
@@ -98,10 +98,10 @@
             <img class="w-full" src="assets/noakhali.png" alt="" />
 
             <!-- text-container -->
-            <div class="w-">
+            <div>
               <!-- donatio amount -->
               <div
-                class="w-32 flex items-center bg-[#11111118] py-3 px-2 rounded-lg mb-4"
+                class="w-40 flex items-center bg-[#11111118] py-3 px-2 rounded-lg mb-4"
               >
                 <!-- coin img -->
                 <img src="assets/coin.png" alt="coin" />
@@ -113,7 +113,8 @@
               <!-- text -->
               <div class="space-y-6">
                 <h1 class="font-bold text-xl text-black1">
-                  Donate for Flood at Noakhali, Bangladesh
+                  Donate
+                  <span id="location">for Flood at Noakhali, Bangladesh</span>
                 </h1>
                 <p class="font-light text-base text-black2">
                   The recent floods in Noakhali have caused significant damage
@@ -132,7 +133,7 @@
                 <!-- Open the modal using ID.showModal() method -->
                 <button
                   id="noakhali-donate-btn"
-                  onclick="hadelButtonClick(this, 'noakhali-input', 'noakhali-donate-btn'), my_modal_1.showModal()"
+                  onclick="hadelButtonClick(this, 'noakhali-input', 'noakhali-total-donate', 'location'), my_modal_1.showModal()"
                   class="btn btn-lg w-full bg-primary rounded-lg"
                 >
                   Donate Now
@@ -159,31 +160,32 @@
             </div>
           </dialog>
         </div>
-
         <!--  2 -->
-
         <div class="mt-8 p-8 border-2 rounded-3xl mb-8">
           <div class="lg:flex gap-8">
             <!-- image -->
-            <img class="w-full" src="assets/noakhali.png" alt="" />
+            <img class="w-full" src="assets/feni.png" alt="" />
 
             <!-- text-container -->
-            <div class="w-">
+            <div>
               <!-- donatio amount -->
               <div
-                class="w-32 flex items-center gap-1 bg-[#11111118] py-3 px-2 rounded-lg mb-4"
+                class="w-40 flex items-center bg-[#11111118] py-3 px-2 rounded-lg mb-4"
               >
                 <!-- coin img -->
                 <img src="assets/coin.png" alt="coin" />
                 <p class="font-medium text-black2 text-base">
-                  <span>5500</span>
+                  <span id="feni-total-donate">5500</span>
                   BDT
                 </p>
               </div>
               <!-- text -->
               <div class="space-y-6">
                 <h1 class="font-bold text-xl text-black1">
-                  Donate for Flood at Noakhali, Bangladesh
+                  Donate
+                  <span id="location2"
+                    >for Flood Relief in Feni,Bangladesh</span
+                  >
                 </h1>
                 <p class="font-light text-base text-black2">
                   The recent floods in Noakhali have caused significant damage
@@ -194,13 +196,15 @@
                   impact on the lives of those in need.
                 </p>
                 <input
+                  id="feni-input"
                   class="w-full px-4 py-4 border-2 rounded-lg"
                   type="number"
                   placeholder="Write Donation Amount"
                 />
                 <!-- Open the modal using ID.showModal() method -->
                 <button
-                  onclick="my_modal_1.showModal()"
+                  id="feni-donate-btn"
+                  onclick="hadelButtonClick(this, 'feni-input', 'feni-total-donate', 'location2'), my_modal_1.showModal()"
                   class="btn btn-lg w-full bg-primary rounded-lg"
                 >
                   Donate Now
@@ -229,29 +233,29 @@
         </div>
 
         <!--  3 -->
-
         <div class="mt-8 p-8 border-2 rounded-3xl mb-8">
           <div class="lg:flex gap-8">
             <!-- image -->
-            <img class="w-full" src="assets/noakhali.png" alt="" />
+            <img class="w-full" src="assets/quota-protest.png" alt="" />
 
             <!-- text-container -->
             <div class="w-">
               <!-- donatio amount -->
               <div
-                class="w-32 flex items-center gap-1 bg-[#11111118] py-3 px-2 rounded-lg mb-4"
+                class="w-32 flex items-center bg-[#11111118] py-3 px-2 rounded-lg mb-4"
               >
                 <!-- coin img -->
                 <img src="assets/coin.png" alt="coin" />
                 <p class="font-medium text-black2 text-base">
-                  <span>5500</span>
+                  <span id="quota-total-donate">5500</span>
                   BDT
                 </p>
               </div>
               <!-- text -->
               <div class="space-y-6">
                 <h1 class="font-bold text-xl text-black1">
-                  Donate for Flood at Noakhali, Bangladesh
+                  Aid
+                  <span id="location3"> for Injured in the Quota Movement</span>
                 </h1>
                 <p class="font-light text-base text-black2">
                   The recent floods in Noakhali have caused significant damage
@@ -262,13 +266,15 @@
                   impact on the lives of those in need.
                 </p>
                 <input
+                  id="quota-input"
                   class="w-full px-4 py-4 border-2 rounded-lg"
                   type="number"
                   placeholder="Write Donation Amount"
                 />
                 <!-- Open the modal using ID.showModal() method -->
                 <button
-                  onclick="my_modal_1.showModal()"
+                  id="noakhali-donate-btn"
+                  onclick="hadelButtonClick(this, 'quota-input', 'quota-total-donate', 'location3'), my_modal_1.showModal()"
                   class="btn btn-lg w-full bg-primary rounded-lg"
                 >
                   Donate Now
@@ -297,7 +303,10 @@
         </div>
       </section>
       <!-- history section -->
-      <section id="history-section"></section>
+      <section
+        id="history-section"
+        class="hidden mt-8 container mx-auto"
+      ></section>
     </main>
     <script src="js/toggle.js"></script>
     <script src="js/utility.js"></script>

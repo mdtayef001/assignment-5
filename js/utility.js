@@ -13,6 +13,11 @@ function getTextFieldValueById(id) {
   return textNumber;
 }
 
+function getTextFlidByID(id) {
+  const text = document.getElementById(id);
+  return text;
+}
+
 function showSectionById(id) {
   document.getElementById("donation-section").classList.add("hidden");
   document.getElementById("history-section").classList.add("hidden");
