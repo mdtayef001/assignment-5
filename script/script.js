@@ -15,6 +15,8 @@ function hadelButtonClick(event, inputId, donateId, locations) {
   const newTotalAmount = totalAmount - inputValue;
   document.getElementById("total-amount").innerText = newTotalAmount;
   updateTottalDonate.innerText = newTotalDonate;
+  alert(` Coagulation! You Have Donated For Humankind. Successfully!
+    `);
 
   // history add
 
