@@ -7,10 +7,9 @@ function hadelButtonClick(event, inputId, donateId, locations) {
   const location = getTextFlidByID(locations);
   const updateTottalDonate = getTextFlidByID(donateId);
   if (typeof inputValue === "undefined" || inputValue > totalAmount) {
-    document.getElementById("my_modal_1").setAttribute("hidden", true);
-    window.alert("Invalid value");
-    console.log(true);
-    return window.location.reload();
+    // document.getElementById("my_modal_1").setAttribute("hidden", true);
+    return window.alert("Invalid value");
+    // return window.location.reload();
   }
   const newTotalDonate = inputValue + totalDonate;
   const newTotalAmount = totalAmount - inputValue;
